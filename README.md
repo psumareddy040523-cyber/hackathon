@@ -2,9 +2,9 @@
 title: SevaSetu
 emoji: 🌾
 colorFrom: green
-colorTo: blue
-sdk: gradio
-sdk_version: 4.44.0
+colorTo: orange
+sdk: streamlit
+sdk_version: "1.40.0"
 app_file: app.py
 pinned: false
 ---
@@ -21,16 +21,17 @@ A platform connecting rural communities with local services, medicines, and farm
 
 ## Demo Credentials
 
-| Role | Login | PIN |
+| Role | Phone | PIN |
 |------|-------|-----|
 | Customer | 9000000001 | 123456 |
 | Provider | 9100000001 | 123456 |
 | Admin | admin | 123456 |
 
-## For Full App Deployment
+## Deployment
 
-This is a Gradio demo. For the full React + Django app:
+1. Create a Hugging Face Space with **Streamlit** SDK
+2. Upload `app.py` and `requirements.txt`
+3. Deploy your Django backend to Render/Replit
+4. Add `API_URL` to Space secrets pointing to your backend
 
-1. Deploy Django backend to Render/Replit
-2. Deploy React frontend to Vercel/Netlify
-3. Update `API_URL` in app.py to point to your backend
+For full app deployment, see the main repository.
